@@ -9,4 +9,4 @@ st.subheader("by Kazuki Uchiyama")
 uploaded_file = st.file_uploader("ファイルを選んでください。", type="csv")
 
 data = pd.read_csv(uploaded_file, encoding="shift-jis")
-data.head()
+st.dataframe(data)
