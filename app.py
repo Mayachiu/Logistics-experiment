@@ -11,8 +11,9 @@ uploaded_file = st.file_uploader("ファイルを選んでください。", type
 data = pd.read_csv(uploaded_file, encoding="shift-jis")
 st.dataframe(data)
 
-#select_list=["時刻","緯度","経度","X軸加速度","Y軸加速度","Z軸加速度","方位","ピッチ","ロール",""]
+#列名取得
 select_list= list(data)
+
 option = st.sidebar.selectbox(
     "x軸に表示するデータを選んでください",
     select_list
@@ -26,3 +27,5 @@ option2 = st.sidebar.selectbox(
 )
 
 "y軸は",option2,"です"
+
+st.write(px.scatter(data,x =option,y = option2))
