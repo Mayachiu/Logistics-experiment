@@ -34,4 +34,6 @@ if uploaded_file is not None:
 
     st.write(px.histogram(data,x =option1 ,y = option2))
 
+    st.write(px.line(data,x =option1 ,y = option2))
+
     st.write(px.scatter_3d(data, x="X軸加速度", y="Y軸加速度", z="Z軸加速度"))
