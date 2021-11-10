@@ -6,8 +6,7 @@ import plotly.express as px
 st.title("流通情報工学実験データ分析アプリ(β)")
 st.subheader("by Kazuki Uchiyama")
 
-st.write("時刻変換後のCSVファイル(XXX_t.csv)をアップロード")
-uploaded_file = st.file_uploader("ファイルを選んでください。", type="csv")
+uploaded_file = st.file_uploader("時刻変換後のCSVファイル(XXX_t.csv)をアップロード", type="csv")
 
 if uploaded_file is not None:
     data = pd.read_csv(uploaded_file, encoding="shift-jis")
