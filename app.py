@@ -38,7 +38,7 @@ if uploaded_file is not None:
         st.write(px.scatter(data,x =option1 ,y = option2))
     if option3 == "折れ線":
         st.write(px.line(data,x =option1 ,y = option2))
-    if option3 == "ヒストグラム"
+    if option3 == "ヒストグラム":
         st.write(px.histogram(data,x =option1 ,y = option2))
 
     
