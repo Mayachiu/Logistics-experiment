@@ -29,11 +29,16 @@ if uploaded_file is not None:
 
     "y軸は",option2,"です"
 
+    option3 = st.sidebar.selectbox(
+            "グラフの種類を選んでください",
+            ["散布図", "折れ線", "ヒストグラム"]
+        )
 
-    st.write(px.scatter(data,x =option1 ,y = option2))
+    if option3 == "散布図":
+        st.write(px.scatter(data,x =option1 ,y = option2))
+    if option3 == "折れ線":
+        st.write(px.line(data,x =option1 ,y = option2))
+    if option3 == "ヒストグラム"
+        st.write(px.histogram(data,x =option1 ,y = option2))
 
-    st.write(px.line(data,x =option1 ,y = option2))
-
-    st.write(px.histogram(data,x =option1 ,y = option2))
-
-    st.write(px.scatter_3d(data, x="X軸加速度", y="Y軸加速度", z="Z軸加速度"))
+    
